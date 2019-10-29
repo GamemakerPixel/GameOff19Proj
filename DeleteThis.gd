@@ -1,3 +1,5 @@
 extends Node
 
-#TestScript =D
+#TestScript
+func _ready():
+	print("Heck Yes!")
