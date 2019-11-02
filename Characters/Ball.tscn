@@ -21,4 +21,7 @@ shape = SubResource( 1 )
 
 [node name="DetectShape" type="CollisionShape2D" parent="DetectCollision"]
 shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
 [connection signal="body_entered" from="DetectCollision" to="." method="_on_DetectCollision_body_entered"]
