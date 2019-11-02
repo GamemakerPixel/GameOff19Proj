@@ -9,9 +9,8 @@ func _process(delta):
 func leap():
 	var Velocity
 	look_at(get_global_mouse_position())
-	if sleeping:
-		Velocity = get_local_mouse_position()
-		sleeping = false
+	sleeping = false
+	var Velocity = get_local_mouse_position() * Vector2(gravity_scale, gravity_scale)
 	apply_central_impulse(Velocity.rotated(rotation))
 	print(Velocity)
 
