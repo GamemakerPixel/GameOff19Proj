@@ -29,4 +29,5 @@ scale = Vector2( 3, 1 )
 
 [node name="Ball" parent="Characters" instance=ExtResource( 2 )]
 position = Vector2( 112, 480 )
+mass = 0.5
 sleeping = true
