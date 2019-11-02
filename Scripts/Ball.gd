@@ -4,15 +4,14 @@ extends RigidBody2D
 
 func _process(delta):
 	if Input.is_action_just_pressed("ClickL"):
-		leap()
+		if sleeping:
+			leap()
 
 func leap():
-	var Velocity
 	look_at(get_global_mouse_position())
 	sleeping = false
-	var Velocity = get_local_mouse_position() * Vector2(gravity_scale, gravity_scale)
+	var Velocity = get_local_mouse_position() * Vector2(gravity_scale / 2, gravity_scale / 2)
 	apply_central_impulse(Velocity.rotated(rotation))
-	print(Velocity)
 
 func _on_DetectCollision_body_entered(body):
 	if body.get_parent().name == "Platforms":
