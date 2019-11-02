@@ -1,0 +1,23 @@
+extends RigidBody2D
+
+
+
+func _process(delta):
+	if Input.is_action_just_pressed("ClickL"):
+		if sleeping:
+			leap()
+	_draw()
+
+func _draw():
+	draw_line(position, get_global_mouse_position(), Color(255, 255, 255))
+
+func leap():
+	sleeping = false
+	var Velocity = get_local_mouse_position()
+	apply_impulse(Velocity, Velocity)
+
+func _on_DetectCollision_body_entered(body):
+	if body.get_parent().name == "Platforms":
+		linear_velocity = Vector2(0, 0)
+		sleeping = true
+		print(angular_velocity)
