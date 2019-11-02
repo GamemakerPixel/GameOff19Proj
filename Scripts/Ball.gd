@@ -4,13 +4,14 @@ extends RigidBody2D
 
 func _process(delta):
 	if Input.is_action_just_pressed("ClickL"):
-		if sleeping:
-			leap()
+		leap()
 
 func leap():
+	var Velocity
 	look_at(get_global_mouse_position())
-	sleeping = false
-	var Velocity = get_local_mouse_position()
+	if sleeping:
+		Velocity = get_local_mouse_position()
+		sleeping = false
 	apply_central_impulse(Velocity.rotated(rotation))
 	print(Velocity)
 
