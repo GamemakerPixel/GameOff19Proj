@@ -8,9 +8,10 @@ func _process(delta):
 			leap()
 
 func leap():
+	look_at(get_global_mouse_position())
 	sleeping = false
 	var Velocity = get_local_mouse_position()
-	apply_impulse(Velocity, Velocity)
+	apply_central_impulse(Velocity.rotated(rotation))
 	print(Velocity)
 
 func _on_DetectCollision_body_entered(body):
