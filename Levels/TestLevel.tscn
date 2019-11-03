@@ -7,261 +7,269 @@
 [node name="TestLevel" type="Node2D"]
 
 [node name="Platforms" type="Node2D" parent="."]
-editor/display_folded = true
+scale = Vector2( 2.5, 2 )
 
 [node name="NormalPlatform" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 112, 496 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform2" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 199.6, 128 )
-scale = Vector2( 5, 1 )
+position = Vector2( 176, 288.16 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform40" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2224, 0 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2200.4, 256 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform5" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 432, 120.08 )
-scale = Vector2( 5, 1 )
+position = Vector2( 408.4, 280.24 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform36" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2456.4, -7.92 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2432.8, 248.08 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform6" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 576, 80 )
-scale = Vector2( 5, 1 )
+position = Vector2( 552.4, 240.16 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform58" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2600.4, -48 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2576.8, 208 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform7" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 720, 107.28 )
-scale = Vector2( 5, 1 )
+position = Vector2( 696.4, 267.44 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform38" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2744.4, -20.72 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2720.8, 235.28 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform8" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 848, 144 )
-scale = Vector2( 5, 1 )
+position = Vector2( 824.4, 304.16 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform32" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2872.4, 16 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2848.8, 272 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform9" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 960, 120.08 )
-scale = Vector2( 5, 1 )
+position = Vector2( 936.4, 280.24 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform43" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2984.4, -7.91998 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2960.8, 248.08 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform10" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 240, 503.92 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform39" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2264.4, 375.92 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2264.4, 471.76 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform11" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 448, 483.2 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform31" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2472.4, 355.2 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2472.4, 451.04 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform12" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 560, 480 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform35" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2584.4, 352 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2584.4, 447.84 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform13" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 688, 491.12 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform52" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2712.4, 363.12 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2712.4, 458.96 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform14" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 808.4, 448 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform54" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2832.8, 320 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2832.8, 415.84 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform15" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 912, 467.2 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform56" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2936.4, 339.2 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2936.4, 435.04 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform16" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 1024, 496 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform55" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3048.4, 368 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3048.4, 463.84 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform17" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 1152, 472.08 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform49" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3176.4, 344.08 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3176.4, 439.92 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform18" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 1328, 499.04 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform46" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3352.4, 371.04 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3352.4, 466.88 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform19" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 1440, 476.04 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
+
+[node name="NormalPlatform61" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 1574.4, 499.04 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform41" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3464.4, 348.04 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3464.4, 443.88 )
+scale = Vector2( 8, 1 )
+
+[node name="NormalPlatform60" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 3603.2, 470.4 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform20" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 1696, 467.2 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform34" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3720.4, 339.2 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3720.4, 435.04 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform21" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 1856, 492.8 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform53" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3880.4, 364.8 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3880.4, 460.64 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform22" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 2016, 454.4 )
-scale = Vector2( 5, 1 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform47" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 4040.4, 326.4 )
-scale = Vector2( 5, 1 )
+position = Vector2( 4040.4, 422.24 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform23" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 1088, 99.36 )
-scale = Vector2( 5, 1 )
+position = Vector2( 1064.4, 259.52 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform48" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3112.4, -28.64 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3088.8, 227.36 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform24" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 1248, 115.2 )
-scale = Vector2( 5, 1 )
+position = Vector2( 1224.4, 275.36 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform45" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3272.4, -12.8 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3248.8, 243.2 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform25" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 1456, 91.44 )
-scale = Vector2( 5, 1 )
+position = Vector2( 1432.4, 251.6 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform33" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3480.4, -36.56 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3456.8, 219.44 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform26" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 1632, 115.2 )
-scale = Vector2( 5, 1 )
+position = Vector2( 1608.4, 275.36 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform57" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3656.4, -12.8 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3632.8, 243.2 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform27" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 1760, 107.28 )
-scale = Vector2( 5, 1 )
+position = Vector2( 1736.4, 267.44 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform42" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3784.4, -20.72 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3760.8, 235.28 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform28" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 1920, 91.44 )
-scale = Vector2( 5, 1 )
+position = Vector2( 1896.4, 251.6 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform59" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 3944.4, -36.56 )
-scale = Vector2( 5, 1 )
+position = Vector2( 3920.8, 219.44 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform29" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2048, 120.08 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2024.4, 280.24 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform44" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 4072.4, -7.92001 )
-scale = Vector2( 5, 1 )
+position = Vector2( 4048.8, 248.08 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform30" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2167.6, 459.28 )
-scale = Vector2( 5, 1 )
+position = Vector2( 2167.6, 555.12 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform50" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 4192, 331.28 )
-scale = Vector2( 5, 1 )
+position = Vector2( 4192, 427.12 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform3" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 352, 448 )
-rotation = -0.785398
-scale = Vector2( 7, 1 )
+rotation = -0.349066
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform51" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2376.4, 320 )
-rotation = -0.785398
-scale = Vector2( 7, 1 )
+position = Vector2( 2375.63, 413.598 )
+rotation = -0.349066
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform4" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 320, 80 )
-scale = Vector2( 3, 1 )
+position = Vector2( 296.4, 240.16 )
+scale = Vector2( 8, 1 )
 
 [node name="NormalPlatform37" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 2344.4, -48 )
-scale = Vector2( 3, 1 )
+position = Vector2( 2320.8, 208 )
+scale = Vector2( 8, 1 )
 
 [node name="Characters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Ball" parent="Characters" instance=ExtResource( 2 )]
-position = Vector2( 112, 288 )
+position = Vector2( 240, 767.68 )
 mass = 0.5
+gravity_scale = 3.0
 sleeping = true
 
 [node name="Boundries" type="Node2D" parent="."]
 
 [node name="BoundryFluid" parent="Boundries" instance=ExtResource( 3 )]
-position = Vector2( 2120, 544 )
-scale = Vector2( 4.41667, 0.25 )
+position = Vector2( 5340, 1184 )
+scale = Vector2( 11.1083, 0.25 )
 
 [node name="BoundryFluid2" parent="Boundries" instance=ExtResource( 3 )]
-position = Vector2( 2120, -96 )
+position = Vector2( 5344, 272 )
 rotation = 3.14159
-scale = Vector2( 4.41667, 0.25 )
+scale = Vector2( 11.128, 0.25 )
