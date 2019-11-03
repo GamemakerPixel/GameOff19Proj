@@ -3,6 +3,7 @@
 [ext_resource path="res://GameOff19Proj/Sprites/Platforms/NormalPlatform.png" type="Texture" id=1]
 
 [node name="NormalPlatform" type="StaticBody2D"]
+scale = Vector2( 2, 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.033, 0.033 )
