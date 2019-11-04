@@ -1,46 +1,140 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://GameOff19Proj/Platforms/Normal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GameOff19Proj/Characters/Ball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GameOff19Proj/Characters/BoundryMonster.tscn" type="PackedScene" id=3]
 
 [node name="TestLevel2" type="Node2D"]
 
 [node name="Platforms" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="NormalPlatform" parent="Platforms" instance=ExtResource( 1 )]
 position = Vector2( 507.053, 504.578 )
-rotation = -0.0872665
+rotation = -0.174533
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform15" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 3576.38, 582.583 )
+rotation = -0.174533
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform9" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 2064.89, 536.232 )
+rotation = -0.174533
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform20" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 5134.21, 614.238 )
+rotation = -0.174533
 scale = Vector2( 7, 1 )
 
 [node name="NormalPlatform4" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 1159.63, 555.314 )
-rotation = -0.0872665
+position = Vector2( 1033.01, 519.138 )
+rotation = -0.174533
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform13" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 4102.34, 597.143 )
+rotation = -0.174533
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform7" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 2590.85, 550.792 )
+rotation = -0.174533
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform19" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 5660.17, 628.797 )
+rotation = -0.174533
 scale = Vector2( 7, 1 )
 
 [node name="NormalPlatform6" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 1633.75, 562.312 )
-rotation = -0.0872665
+position = Vector2( 1534.27, 560.051 )
+rotation = -0.174533
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform14" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 4603.59, 638.056 )
+rotation = -0.174533
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform8" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 3092.1, 591.705 )
+rotation = -0.174533
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform17" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 6161.42, 669.711 )
+rotation = -0.174533
 scale = Vector2( 7, 1 )
 
 [node name="NormalPlatform2" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 792.225, 215.906 )
-rotation = 0.0872665
+position = Vector2( 740.222, 152.598 )
+rotation = 0.261799
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform18" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 3809.55, 230.603 )
+rotation = 0.261799
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform10" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 2298.06, 184.252 )
+rotation = 0.261799
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform16" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 5367.38, 262.257 )
+rotation = 0.261799
 scale = Vector2( 7, 1 )
 
 [node name="NormalPlatform3" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 1444.8, 266.642 )
-rotation = 0.0872665
+position = Vector2( 1250.35, 176.202 )
+rotation = 0.261799
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform24" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 4319.68, 254.206 )
+rotation = 0.261799
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform12" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 2808.19, 207.856 )
+rotation = 0.261799
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform21" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 5877.51, 285.861 )
+rotation = 0.261799
 scale = Vector2( 7, 1 )
 
 [node name="NormalPlatform5" parent="Platforms" instance=ExtResource( 1 )]
-position = Vector2( 1918.92, 273.64 )
-rotation = 0.0872665
+position = Vector2( 1728.99, 180.939 )
+rotation = 0.261799
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform22" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 4798.32, 258.943 )
+rotation = 0.261799
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform11" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 3286.83, 212.593 )
+rotation = 0.261799
+scale = Vector2( 7, 1 )
+
+[node name="NormalPlatform23" parent="Platforms" instance=ExtResource( 1 )]
+position = Vector2( 6356.15, 290.598 )
+rotation = 0.261799
 scale = Vector2( 7, 1 )
 
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="Ball" parent="Characters" instance=ExtResource( 2 )]
-position = Vector2( 77.9924, 259.943 )
+position = Vector2( 339.052, 337.948 )
 sleeping = true
+
+[node name="BoundryMonster" parent="Characters" instance=ExtResource( 3 )]
 
 [node name="Boundries" type="Node2D" parent="."]
