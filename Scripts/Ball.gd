@@ -8,9 +8,12 @@ func _process(delta):
 			leap()
 
 func leap():
+	var starting = true
+	if starting:
+		get_parent().get_node("BoundryMonster").ready = true
 	look_at(get_global_mouse_position())
 	sleeping = false
-	var Velocity = get_local_mouse_position() * Vector2(gravity_scale / 2, gravity_scale / 2)
+	var Velocity = get_local_mouse_position() * Vector2(gravity_scale / 1.2, gravity_scale / 1.2)
 	apply_central_impulse(Velocity.rotated(rotation))
 
 func _on_DetectCollision_body_entered(body):
