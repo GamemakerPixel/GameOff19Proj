@@ -7,6 +7,7 @@
 [node name="TestLevel" type="Node2D"]
 
 [node name="Platforms" type="Node2D" parent="."]
+editor/display_folded = true
 scale = Vector2( 2.5, 2 )
 
 [node name="NormalPlatform" parent="Platforms" instance=ExtResource( 1 )]
@@ -268,8 +269,10 @@ sleeping = true
 [node name="BoundryFluid" parent="Boundries" instance=ExtResource( 3 )]
 position = Vector2( 5340, 1184 )
 scale = Vector2( 11.1083, 0.25 )
+frame = 1
 
 [node name="BoundryFluid2" parent="Boundries" instance=ExtResource( 3 )]
 position = Vector2( 5344, 272 )
 rotation = 3.14159
 scale = Vector2( 11.128, 0.25 )
+frame = 1
