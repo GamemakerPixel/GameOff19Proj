@@ -6,6 +6,12 @@ func _process(delta):
 	if Input.is_action_just_pressed("ClickL"):
 		if sleeping:
 			leap()
+	update_visuals()
+
+func update_visuals():
+	var monToSelfDis = position.x - get_parent().get_node("BoundryMonster").position.x
+	if monToSelfDis > 1000:
+		$CanvasLayer/Tracker.scale = Vector2(1000/monToSelfDis, 1000/monToSelfDis)
 
 func leap():
 	var starting = true
