@@ -6,13 +6,15 @@
 
 [node name="RGLevel" type="Node2D"]
 script = ExtResource( 1 )
+distance = 50000
+percentPlatformFrequency = 98
 
 [node name="Platforms" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="Ball" parent="Characters" instance=ExtResource( 2 )]
-position = Vector2( 200, 300 )
+position = Vector2( 400, 654 )
 
 [node name="BoundryMonster" parent="Characters" instance=ExtResource( 3 )]
 position = Vector2( 0, -200 )
