@@ -135,7 +135,6 @@ scale = Vector2( 7, 1 )
 
 [node name="Ball" parent="Characters" instance=ExtResource( 3 )]
 position = Vector2( 339.052, 337.948 )
-sleeping = true
 
 [node name="BoundryMonster" parent="Characters" instance=ExtResource( 4 )]
 position = Vector2( 0, -200 )
@@ -145,10 +144,10 @@ position = Vector2( 0, -200 )
 [node name="BounderyLiquid" parent="Boundries" instance=ExtResource( 5 )]
 position = Vector2( 3851.07, 864.838 )
 scale = Vector2( 8.15399, 0.066 )
-frame = 2
+frame = 3
 
 [node name="BounderyLiquid2" parent="Boundries" instance=ExtResource( 5 )]
 position = Vector2( 3844.29, -108.529 )
 rotation = 3.14159
 scale = Vector2( 8.15399, 0.066 )
-frame = 2
+frame = 3
