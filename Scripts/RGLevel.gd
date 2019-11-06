@@ -32,7 +32,10 @@ func generateForPos(pos, height = "low"):
 	if rng.randi_range(1, 100) <= percentPlatformFrequency:
 		var object = preload("res://GameOff19Proj/Platforms/Normal.tscn").instance()
 		$Platforms.add_child(object)
-		object.position = Vector2(pos, 504)
-		object.scale.x = rng.randi_range(2, 7)
+		if height == "top":
+			object.position = Vector2(pos, 804)
+		else:
+			object.position = Vector2(pos, 504)
+		object.scale.x = rng.randi_range(5, 9)
 		object.rotation_degrees = rng.randi_range(-10, 10)
 		print("Place " + str(object) + " at pos " + str(pos))
