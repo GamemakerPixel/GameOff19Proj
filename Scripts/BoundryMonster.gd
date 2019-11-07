@@ -11,7 +11,7 @@ func _ready():
 func _process(delta):
 	if ready:
 		move_and_slide(Vector2(speed, 0))
-		speed += 0.2 #0.3
+		speed += 0.3
 
 func _on_Collider_body_entered(body):
 	if body.name == "Ball":
