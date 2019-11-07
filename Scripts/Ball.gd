@@ -9,6 +9,8 @@ func _process(delta):
 		if sleeping:
 			leap()
 	update_visuals()
+	if position.x < get_parent().get_node("BoundryMonster").position.x:
+		get_tree().reload_current_scene()
 
 func update_visuals():
 	var monToSelfDis = position.x - get_parent().get_node("BoundryMonster").position.x
