@@ -46,11 +46,13 @@ func generateForPos(pos, height = "low"):
 func placeBoundries(from, to):
 	var b1 = preload("res://GameOff19Proj/Boundries/BoundryFluid.tscn").instance()
 	var b2 = preload("res://GameOff19Proj/Boundries/BoundryFluid.tscn").instance()
-	b1.position = Vector2(to/2, 604)
+	b1.position = Vector2(to/2, 404)
 	b2.position = Vector2(to/2, 904)
-	b1.scale.x = chunkDistance/960
-	b2.scale = b1.scale
-	add
+	#b1.scale.x = chunkDistance/480
+	#b2.scale = b1.scale
+	b1.rotation_degrees = 180
+	$Boundries.add_child(b1)
+	$Boundries.add_child(b2)
 
 func _process(delta):
 	if $Characters/Ball.position.x >= currentChunkReach - 2000:
