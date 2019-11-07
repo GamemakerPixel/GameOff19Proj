@@ -32,4 +32,13 @@ current = true
 [node name="Tracker" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 50, 300 )
 texture = ExtResource( 3 )
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+margin_left = 888.0
+margin_top = 2.0
+margin_right = 1025.0
+margin_bottom = 50.0
+text = "Score: 0"
+align = 1
+valign = 1
 [connection signal="body_entered" from="DetectCollision" to="." method="_on_DetectCollision_body_entered"]
