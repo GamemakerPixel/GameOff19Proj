@@ -1,19 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/RGLevel.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Characters/Ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GameOff19Proj/Characters/BoundryMonster.tscn" type="PackedScene" id=3]
-[ext_resource path="res://GameOff19Proj/Boundries/BoundryFluid.tscn" type="PackedScene" id=4]
 
 [node name="RGLevel" type="Node2D"]
 script = ExtResource( 1 )
-chunkDistance = 5000
-percentPlatformFrequency = 98
+percentPlatformFrequency = 80
 
 [node name="Platforms" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Ball" parent="Characters" instance=ExtResource( 2 )]
 position = Vector2( 400, 654 )
@@ -22,7 +19,3 @@ position = Vector2( 400, 654 )
 position = Vector2( 0, -200 )
 
 [node name="Boundries" type="Node2D" parent="."]
-
-[node name="BounderyLiquid" parent="Boundries" instance=ExtResource( 4 )]
-position = Vector2( 2153.62, 939.451 )
-frame = 2
