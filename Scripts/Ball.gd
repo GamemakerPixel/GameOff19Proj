@@ -1,8 +1,10 @@
 extends RigidBody2D
 
-
+var score = 0
 
 func _process(delta):
+	score = int(position.x / 50) - 8
+	$CanvasLayer/Score.text = "Score: " + str(score)
 	if Input.is_action_just_pressed("ClickL"):
 		if sleeping:
 			leap()
