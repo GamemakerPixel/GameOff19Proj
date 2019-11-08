@@ -30,6 +30,7 @@ current = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Tracker" type="Sprite" parent="CanvasLayer"]
+modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 50, 300 )
 texture = ExtResource( 3 )
 
@@ -41,4 +42,14 @@ margin_bottom = 50.0
 text = "Score: 0"
 align = 1
 valign = 1
+
+[node name="Achevement" type="ColorRect" parent="CanvasLayer"]
+margin_right = 111.0
+margin_bottom = 28.0
+rect_scale = Vector2( 2, 2 )
+color = Color( 1, 0, 0, 0.192157 )
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Achevement"]
+margin_right = 29.0
+margin_bottom = 28.0
 [connection signal="body_entered" from="DetectCollision" to="." method="_on_DetectCollision_body_entered"]
