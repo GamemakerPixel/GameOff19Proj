@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Sprites/Characters/Ball.png" type="Texture" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://GameOff19Proj/Scripts/Camera2D.gd" type="Script" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.0
@@ -26,13 +27,14 @@ shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+script = ExtResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Tracker" type="Sprite" parent="CanvasLayer"]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 50, 300 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="Score" type="Label" parent="CanvasLayer"]
 margin_left = 888.0
@@ -49,7 +51,7 @@ margin_left = 480.0
 margin_top = 268.0
 margin_right = 544.0
 margin_bottom = 332.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 expand = true
 
 [node name="Label" type="Label" parent="CanvasLayer/Achievement"]
@@ -60,4 +62,9 @@ margin_bottom = 78.0
 text = "Medal Unlocked"
 align = 1
 valign = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 1, 1, 1, 0 )
 [connection signal="body_entered" from="DetectCollision" to="." method="_on_DetectCollision_body_entered"]
