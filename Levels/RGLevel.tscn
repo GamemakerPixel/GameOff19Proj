@@ -17,5 +17,6 @@ position = Vector2( 400, 654 )
 
 [node name="BoundryMonster" parent="Characters" instance=ExtResource( 3 )]
 position = Vector2( 0, -200 )
+startSpeed = 200
 
 [node name="Boundries" type="Node2D" parent="."]
