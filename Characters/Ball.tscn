@@ -43,13 +43,21 @@ text = "Score: 0"
 align = 1
 valign = 1
 
-[node name="Achevement" type="ColorRect" parent="CanvasLayer"]
-margin_right = 111.0
-margin_bottom = 28.0
-rect_scale = Vector2( 2, 2 )
-color = Color( 1, 0, 0, 0.192157 )
+[node name="Achievement" type="TextureRect" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 480.0
+margin_top = 268.0
+margin_right = 544.0
+margin_bottom = 332.0
+texture = ExtResource( 3 )
+expand = true
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Achevement"]
-margin_right = 29.0
-margin_bottom = 28.0
+[node name="Label" type="Label" parent="CanvasLayer/Achievement"]
+margin_left = -32.0
+margin_top = 64.0
+margin_right = 96.0
+margin_bottom = 78.0
+text = "Medal Unlocked"
+align = 1
+valign = 1
 [connection signal="body_entered" from="DetectCollision" to="." method="_on_DetectCollision_body_entered"]
