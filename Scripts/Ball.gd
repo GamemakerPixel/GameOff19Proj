@@ -2,6 +2,9 @@ extends RigidBody2D
 
 var score = 0
 
+func _ready():
+	pass
+
 func _process(delta):
 	score = int(position.x / 50) - 8
 	$CanvasLayer/Score.text = "Score: " + str(score)
@@ -11,6 +14,11 @@ func _process(delta):
 	update_visuals()
 	if position.x < get_parent().get_node("BoundryMonster").position.x:
 		get_tree().reload_current_scene()
+	if position.x - get_parent().get_node("BoundryMonster").position.x < 4000:
+		$Camera2D.shake(0.5, 20, 40 - ((position.x - get_parent().get_node("BoundryMonster").position.x)/100))
+		if position.x - get_parent().get_node("BoundryMonster").position.x < 2000:
+			var opacity = 255 - (255 / (position.x - get_parent().get_node("BoundryMonster").position.x)) + 1
+			$CanvasLayer/ColorRect.modulate = Color(255, 255, 255, opacity)
 
 func update_visuals():
 	var monToSelfDis = position.x - get_parent().get_node("BoundryMonster").position.x
