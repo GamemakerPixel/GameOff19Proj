@@ -15,7 +15,7 @@ func _process(delta):
 	if position.x < get_parent().get_node("BoundryMonster").position.x:
 		get_tree().reload_current_scene()
 	if position.x - get_parent().get_node("BoundryMonster").position.x < 4000:
-		$Camera2D.shake(0.5, 20, 40 - ((position.x - get_parent().get_node("BoundryMonster").position.x)/100))
+		$Camera2D.shake(0.5, 20, (40 - ((position.x - get_parent().get_node("BoundryMonster").position.x)/100))/4)
 		if position.x - get_parent().get_node("BoundryMonster").position.x < 2000:
 			var opacity = 255 - (255 / (position.x - get_parent().get_node("BoundryMonster").position.x)) + 1
 			$CanvasLayer/ColorRect.modulate = Color(255, 255, 255, opacity)
