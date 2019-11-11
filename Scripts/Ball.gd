@@ -24,6 +24,9 @@ func update_visuals():
 	var monToSelfDis = position.x - get_parent().get_node("BoundryMonster").position.x
 	if monToSelfDis > 1000:
 		$CanvasLayer/Tracker.scale = Vector2(1000/monToSelfDis, 1000/monToSelfDis)
+	if monToSelfDis < 2550:
+		$CanvasLayer/BoundryAlert.modulate = Color(255, int(monToSelfDis/10), int(monToSelfDis/10))
+		print(monToSelfDis)
 
 func leap():
 	var starting = true
