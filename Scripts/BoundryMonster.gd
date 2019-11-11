@@ -15,4 +15,4 @@ func _process(delta):
 
 func _on_Collider_body_entered(body):
 	if body.name == "Ball":
-		get_tree().reload_current_scene()
+		body.get_node("CanvasLayer/GameOver").appear(body.score)
