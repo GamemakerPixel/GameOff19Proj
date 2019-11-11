@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Sprites/Characters/Ball.png" type="Texture" id=2]
@@ -100,6 +100,8 @@ tracks/6/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+
+[sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="DynamicFont" id=4]
 size = 80
@@ -203,6 +205,7 @@ custom_constants/separation = 15
 [node name="Retry" type="Button" parent="CanvasLayer/GameOver/Buttons"]
 margin_right = 1024.0
 margin_bottom = 70.0
+custom_styles/focus = SubResource( 5 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
@@ -214,6 +217,7 @@ flat = true
 margin_top = 85.0
 margin_right = 1024.0
 margin_bottom = 155.0
+custom_styles/focus = SubResource( 5 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
@@ -225,6 +229,7 @@ flat = true
 margin_top = 170.0
 margin_right = 1024.0
 margin_bottom = 240.0
+custom_styles/focus = SubResource( 5 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
