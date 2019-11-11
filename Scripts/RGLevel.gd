@@ -10,7 +10,6 @@ func _ready():
 	runGenerationSequence(0, chunkDistance)
 
 func runGenerationSequence(from, to):
-	print("Generating from " + str(from) + " to " + str(to))
 	currentChunkReach = to
 	placeBoundries(from, to)
 	while posQueue.back() != platformDisBetween:
@@ -26,7 +25,6 @@ func runGenerationSequence(from, to):
 		else:
 			break
 	for pos in posQueue:
-		print(pos)
 		generateForPos(pos)
 		generateForPos(pos + platformDisBetween/2, "top")
 
@@ -56,6 +54,5 @@ func placeBoundries(from, to):
 
 func _process(delta):
 	if $Characters/Ball.position.x >= currentChunkReach - 2000:
-		print("Preparing to generate from " + str(currentChunkReach) + " to " + str(currentChunkReach + chunkDistance))
 		posQueue.append(-1)
 		runGenerationSequence(currentChunkReach, currentChunkReach + chunkDistance)
