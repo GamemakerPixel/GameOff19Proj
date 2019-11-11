@@ -17,7 +17,6 @@ func _ready():
 func _process(delta):
 	if _timer == 0:
 		return
-	print(_timer)
 	_last_shook_timer = _last_shook_timer + delta
 	while _last_shook_timer >= _period_in_ms:
 		_last_shook_timer = _last_shook_timer - _period_in_ms
