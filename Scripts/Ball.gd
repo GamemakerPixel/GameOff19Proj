@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 var score = 0
+var onGameOver = false
 
 func _ready():
 	pass
@@ -13,7 +14,9 @@ func _process(delta):
 			leap()
 	update_visuals()
 	if position.x < get_parent().get_node("BoundryMonster").position.x:
-		$CanvasLayer/GameOver.appear(score)
+		if not onGameOver:
+			$CanvasLayer/GameOver.appear(score)
+			onGameOver = true
 	if position.x - get_parent().get_node("BoundryMonster").position.x < 4000:
 		$Camera2D.shake(0.5, 20, (40 - ((position.x - get_parent().get_node("BoundryMonster").position.x)/100))/4)
 		if position.x - get_parent().get_node("BoundryMonster").position.x < 2000:
