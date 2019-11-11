@@ -67,4 +67,10 @@ valign = 1
 margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 1, 1, 1, 0 )
+
+[node name="BoundryAlert" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 18, 18 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+centered = false
 [connection signal="body_entered" from="DetectCollision" to="." method="_on_DetectCollision_body_entered"]
