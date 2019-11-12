@@ -1,21 +1,24 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Sprites/Characters/Ball.png" type="Texture" id=2]
 [ext_resource path="res://GameOff19Proj/Scripts/Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://GameOff19Proj/Scripts/GameOver.gd" type="Script" id=5]
-[ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://GameOff19Proj/Scripts/GameOver.gd" type="Script" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.0
 
 [sub_resource type="DynamicFont" id=2]
-size = 100
-font_data = ExtResource( 6 )
+size = 50
+font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "GameOver"
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
 tracks/0/interp = 2
@@ -103,9 +106,9 @@ tracks/6/keys = {
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 80
-font_data = ExtResource( 6 )
+font_data = ExtResource( 5 )
 
 [node name="Ball" type="RigidBody2D"]
 gravity_scale = 4.0
@@ -136,12 +139,13 @@ position = Vector2( 50, 300 )
 texture = ExtResource( 4 )
 
 [node name="Score" type="Label" parent="CanvasLayer"]
-margin_left = 888.0
-margin_top = 2.0
-margin_right = 1025.0
-margin_bottom = 50.0
+margin_left = 766.0
+margin_top = 10.0
+margin_right = 1004.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 2 )
 text = "Score: 0"
-align = 1
+align = 2
 valign = 1
 
 [node name="Achievement" type="TextureRect" parent="CanvasLayer"]
@@ -171,12 +175,12 @@ color = Color( 1, 1, 1, 0 )
 margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0.117647, 0, 0, 0 )
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
 [node name="GameOver" type="Label" parent="CanvasLayer/GameOver"]
 margin_right = 1024.0
 margin_bottom = 100.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.909804, 0, 0, 0 )
 text = "Game Over!"
 align = 1
@@ -186,14 +190,14 @@ valign = 1
 margin_top = 150.0
 margin_right = 1024.0
 margin_bottom = 250.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.909804, 0, 0, 0 )
 text = "Score: Val"
 align = 1
 valign = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/GameOver"]
-anims/GameOver = SubResource( 3 )
+anims/GameOver = SubResource( 4 )
 
 [node name="Buttons" type="VBoxContainer" parent="CanvasLayer/GameOver"]
 modulate = Color( 1, 1, 1, 0 )
@@ -206,7 +210,7 @@ custom_constants/separation = 15
 margin_right = 1024.0
 margin_bottom = 70.0
 custom_styles/focus = SubResource( 5 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
 disabled = true
@@ -218,7 +222,7 @@ margin_top = 85.0
 margin_right = 1024.0
 margin_bottom = 155.0
 custom_styles/focus = SubResource( 5 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
 disabled = true
@@ -230,7 +234,7 @@ margin_top = 170.0
 margin_right = 1024.0
 margin_bottom = 240.0
 custom_styles/focus = SubResource( 5 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
 disabled = true
