@@ -22,6 +22,7 @@ func _process(delta):
 		if position.x - get_parent().get_node("BoundryMonster").position.x < 2000:
 			var opacity = 255 - (255 / (position.x - get_parent().get_node("BoundryMonster").position.x)) + 1
 			$CanvasLayer/ColorRect.modulate = Color(255, 255, 255, opacity)
+	if GlobalVariables.gameGenerationSettings == [500, 90]
 
 func update_visuals():
 	var monToSelfDis = position.x - get_parent().get_node("BoundryMonster").position.x
