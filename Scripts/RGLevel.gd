@@ -1,8 +1,8 @@
 extends Node2D
 
 export (int) var chunkDistance = 10000
-export (int) var platformDisBetween = 500
-export (int) var percentPlatformFrequency = 100
+var platformDisBetween = GlobalVariables.gameGenerationSettings[0]
+var percentPlatformFrequency = GlobalVariables.gameGenerationSettings[1]
 var posQueue = [-1]
 var currentChunkReach = 0
 
