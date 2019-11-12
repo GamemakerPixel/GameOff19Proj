@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Sprites/Characters/Ball.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://GameOff19Proj/Scripts/GameOver.gd" type="Script" id=6]
+[ext_resource path="res://GameOff19Proj/Sprites/Medals.png" type="Texture" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.0
@@ -110,6 +111,51 @@ tracks/6/keys = {
 size = 80
 font_data = ExtResource( 5 )
 
+[sub_resource type="DynamicFont" id=7]
+size = 50
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "Medal"
+length = 1.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-005, 1e-005 ), Vector2( 7, 7 ), Vector2( 6, 6 ), Vector2( 7, 7 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1, 1.2, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 512, 300 ), Vector2( 512, -96 ), Vector2( 512, 300 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
 [node name="Ball" type="RigidBody2D"]
 gravity_scale = 4.0
 sleeping = true
@@ -146,24 +192,6 @@ margin_bottom = 60.0
 custom_fonts/font = SubResource( 2 )
 text = "Score: 0"
 align = 2
-valign = 1
-
-[node name="Achievement" type="TextureRect" parent="CanvasLayer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 480.0
-margin_top = 268.0
-margin_right = 544.0
-margin_bottom = 332.0
-texture = ExtResource( 4 )
-expand = true
-
-[node name="Label" type="Label" parent="CanvasLayer/Achievement"]
-margin_left = -32.0
-margin_top = 64.0
-margin_right = 96.0
-margin_bottom = 78.0
-text = "Medal Unlocked"
-align = 1
 valign = 1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
@@ -240,6 +268,25 @@ custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
 disabled = true
 text = "Quit"
 flat = true
+
+[node name="Medal" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 512, 300 )
+scale = Vector2( 1e-005, 1e-005 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Medal"]
+margin_left = -17.0
+margin_top = 8.202
+margin_right = 260.0
+margin_bottom = 49.202
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 7 )
+text = "Easy - Bronze"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Medal"]
+anims/Medal = SubResource( 8 )
 [connection signal="body_entered" from="DetectCollision" to="." method="_on_DetectCollision_body_entered"]
 [connection signal="pressed" from="CanvasLayer/GameOver/Buttons/Retry" to="CanvasLayer/GameOver" method="_on_Retry_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameOver/Buttons/Menu" to="CanvasLayer/GameOver" method="_on_Menu_pressed"]
