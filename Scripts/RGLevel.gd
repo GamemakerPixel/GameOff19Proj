@@ -38,8 +38,8 @@ func generateForPos(pos, height = "low"):
 			object.position = Vector2(pos, 804)
 		else:
 			object.position = Vector2(pos, 504)
-		object.scale.x = rng.randi_range(5, 9)
-		object.rotation_degrees = rng.randi_range(-10, 10)
+		object.scale.x = rng.randi_range(GlobalVariables.gameGenerationSettings[2], GlobalVariables.gameGenerationSettings[2] + 4)
+		object.rotation_degrees = rng.randi_range(-GlobalVariables.gameGenerationSettings[3], GlobalVariables.gameGenerationSettings[3])
 
 func placeBoundries(from, to):
 	var b1 = preload("res://GameOff19Proj/Boundries/BoundryFluid.tscn").instance()
