@@ -2,14 +2,15 @@ extends RigidBody2D
 
 var score = 0
 var onGameOver = false
+var startSleeping = true
 
 func _ready():
 	pass
 
 func _process(delta):
-	print(sleeping)
-	if position.y > 804 || position.y < 504:
-		shortReset()
+	if startSleeping:
+		sleeping = true
+		startSleeping = false
 	if Input.is_action_pressed("ui_up"):
 		position.x += 1000
 	score = int(position.x / 50) - 8
@@ -25,8 +26,11 @@ func _process(delta):
 	if position.x - get_parent().get_node("BoundryMonster").position.x < 4000:
 		$Camera2D.shake(0.5, 20, (40 - ((position.x - get_parent().get_node("BoundryMonster").position.x)/100))/4)
 		if position.x - get_parent().get_node("BoundryMonster").position.x < 2000:
-			var opacity = 255 - (255 / (position.x - get_parent().get_node("BoundryMonster").position.x)) + 1
-			$CanvasLayer/ColorRect.modulate = Color(255, 255, 255, opacity)
+			var opacity = (2550 - (position.x - get_parent().get_node("BoundryMonster").position.x)) / 10
+			print(opacity)
+			$CanvasLayer/ColorRect.color = Color8(255, 255, 255, opacity)
+	if position.y > 904 || position.y < 404:
+		shortReset()
 	determineMedals()
 
 func shortReset():
@@ -35,7 +39,7 @@ func shortReset():
 		if position.x < 400:
 			position.x = 400
 	position.y = 654
-	sleeping = true
+	startSleeping = true
 
 func determineMedals():
 	if GlobalVariables.gameGenerationSettings == [500, 90, 5, 10, 10, 0.3]:
@@ -108,6 +112,7 @@ func update_visuals():
 		$CanvasLayer/Tracker.scale = Vector2(1000/monToSelfDis, 1000/monToSelfDis)
 
 func leap():
+	print("LEAP")
 	var starting = true
 	if starting:
 		get_parent().get_node("BoundryMonster").ready = true
