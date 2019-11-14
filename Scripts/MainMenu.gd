@@ -6,7 +6,7 @@ func _on_Play_pressed():
 	get_tree().change_scene("res://GameOff19Proj/Levels/RGLevel.tscn")
 
 func _on_Modes_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://GameOff19Proj/Menus/Modes.tscn")
 
 func _on_Metals_pressed():
 	pass # Replace with function body.
