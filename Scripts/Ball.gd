@@ -7,7 +7,15 @@ func _ready():
 	pass
 
 func _process(delta):
-	if Input.is_action_just_pressed("ui_up"):
+	if position.y > 804 && position.y < 504:
+		print("Out of bounds")
+		if not position.x - get_parent().get_node("BoundryMonster").position.x <= 1500:
+			position.x -= 1000
+			if position.x < 400:
+				position.x = 400
+		position.y = 654
+		sleeping = true
+	if Input.is_action_pressed("ui_up"):
 		position.x += 1000
 	score = int(position.x / 50) - 8
 	$CanvasLayer/Score.text = "Score: " + str(score)
