@@ -24,7 +24,7 @@ func _on_Hard_pressed():
 
 func selectButton(button):
 	if button == 1:
-		$Buttons/Easy.modulate = Color8(255, 255, 255, 255)
+		$Buttons/Easy.custom_colors/font_color = Color8(255, 255, 255, 255)
 		$Buttons/Normal.modulate = Color8(165, 0, 0, 255)
 		$Buttons/Hard.modulate = Color8(165, 0, 0, 255)
 	if button == 2:
