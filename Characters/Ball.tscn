@@ -196,7 +196,7 @@ valign = 1
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 margin_right = 1024.0
 margin_bottom = 600.0
-color = Color( 1, 1, 1, 0 )
+color = Color( 1, 0.0588235, 0.0588235, 0 )
 
 [node name="GameOver" type="ColorRect" parent="CanvasLayer"]
 margin_right = 1024.0
