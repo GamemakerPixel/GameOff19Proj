@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var startSpeed = 10
+var startSpeed = GlobalVariables.gameGenerationSettings[4]
 var speed
 var ready
 
@@ -11,8 +11,10 @@ func _ready():
 func _process(delta):
 	if ready:
 		move_and_slide(Vector2(speed, 0))
-		speed += 0.3
+		speed += GlobalVariables.gameGenerationSettings[5]
 
 func _on_Collider_body_entered(body):
 	if body.name == "Ball":
-		get_tree().reload_current_scene()
+		if not body.onGameOver:
+			body.get_node("CanvasLayer/GameOver").appear(body.score)
+			body.onGameOver = true

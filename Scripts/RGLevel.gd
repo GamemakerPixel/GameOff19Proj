@@ -1,8 +1,8 @@
 extends Node2D
 
 export (int) var chunkDistance = 10000
-export (int) var platformDisBetween = 500
-export (int) var percentPlatformFrequency = 100
+var platformDisBetween = GlobalVariables.gameGenerationSettings[0]
+var percentPlatformFrequency = GlobalVariables.gameGenerationSettings[1]
 var posQueue = [-1]
 var currentChunkReach = 0
 
@@ -10,7 +10,6 @@ func _ready():
 	runGenerationSequence(0, chunkDistance)
 
 func runGenerationSequence(from, to):
-	print("Generating from " + str(from) + " to " + str(to))
 	currentChunkReach = to
 	placeBoundries(from, to)
 	while posQueue.back() != platformDisBetween:
@@ -26,7 +25,6 @@ func runGenerationSequence(from, to):
 		else:
 			break
 	for pos in posQueue:
-		print(pos)
 		generateForPos(pos)
 		generateForPos(pos + platformDisBetween/2, "top")
 
@@ -40,8 +38,8 @@ func generateForPos(pos, height = "low"):
 			object.position = Vector2(pos, 804)
 		else:
 			object.position = Vector2(pos, 504)
-		object.scale.x = rng.randi_range(5, 9)
-		object.rotation_degrees = rng.randi_range(-10, 10)
+		object.scale.x = rng.randi_range(GlobalVariables.gameGenerationSettings[2], GlobalVariables.gameGenerationSettings[2] + 4)
+		object.rotation_degrees = rng.randi_range(-GlobalVariables.gameGenerationSettings[3], GlobalVariables.gameGenerationSettings[3])
 
 func placeBoundries(from, to):
 	var b1 = preload("res://GameOff19Proj/Boundries/BoundryFluid.tscn").instance()
@@ -56,6 +54,5 @@ func placeBoundries(from, to):
 
 func _process(delta):
 	if $Characters/Ball.position.x >= currentChunkReach - 2000:
-		print("Preparing to generate from " + str(currentChunkReach) + " to " + str(currentChunkReach + chunkDistance))
 		posQueue.append(-1)
 		runGenerationSequence(currentChunkReach, currentChunkReach + chunkDistance)
