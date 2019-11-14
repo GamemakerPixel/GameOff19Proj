@@ -7,14 +7,9 @@ func _ready():
 	pass
 
 func _process(delta):
-	if position.y > 804 && position.y < 504:
-		print("Out of bounds")
-		if not position.x - get_parent().get_node("BoundryMonster").position.x <= 1500:
-			position.x -= 1000
-			if position.x < 400:
-				position.x = 400
-		position.y = 654
-		sleeping = true
+	print(sleeping)
+	if position.y > 804 || position.y < 504:
+		shortReset()
 	if Input.is_action_pressed("ui_up"):
 		position.x += 1000
 	score = int(position.x / 50) - 8
@@ -33,6 +28,14 @@ func _process(delta):
 			var opacity = 255 - (255 / (position.x - get_parent().get_node("BoundryMonster").position.x)) + 1
 			$CanvasLayer/ColorRect.modulate = Color(255, 255, 255, opacity)
 	determineMedals()
+
+func shortReset():
+	if not position.x - get_parent().get_node("BoundryMonster").position.x <= 1500:
+		position.x -= 1000
+		if position.x < 400:
+			position.x = 400
+	position.y = 654
+	sleeping = true
 
 func determineMedals():
 	if GlobalVariables.gameGenerationSettings == [500, 90, 5, 10, 10, 0.3]:
