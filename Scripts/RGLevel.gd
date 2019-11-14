@@ -11,7 +11,6 @@ func _ready():
 
 func runGenerationSequence(from, to):
 	currentChunkReach = to
-	placeBoundries(from, to)
 	while posQueue.back() != platformDisBetween:
 		if posQueue.back() == -1:
 			posQueue.clear()
@@ -41,16 +40,17 @@ func generateForPos(pos, height = "low"):
 		object.scale.x = rng.randi_range(GlobalVariables.gameGenerationSettings[2], GlobalVariables.gameGenerationSettings[2] + 4)
 		object.rotation_degrees = rng.randi_range(-GlobalVariables.gameGenerationSettings[3], GlobalVariables.gameGenerationSettings[3])
 
-func placeBoundries(from, to):
-	var b1 = preload("res://GameOff19Proj/Boundries/BoundryFluid.tscn").instance()
-	var b2 = preload("res://GameOff19Proj/Boundries/BoundryFluid.tscn").instance()
-	b1.position = Vector2(to/2, 404)
-	b2.position = Vector2(to/2, 904)
-	#b1.scale.x = chunkDistance/480
-	#b2.scale = b1.scale
-	b1.rotation_degrees = 180
-	$Boundries.add_child(b1)
-	$Boundries.add_child(b2)
+#Removed Code
+#func placeBoundries(from, to):
+	#var b1 = preload("res://GameOff19Proj/Boundries/BoundryFluid.tscn").instance()
+	#var b2 = preload("res://GameOff19Proj/Boundries/BoundryFluid.tscn").instance()
+	#b1.position = Vector2(to/2, 404)
+	#b2.position = Vector2(to/2, 904)
+	##b1.scale.x = chunkDistance/480
+	##b2.scale = b1.scale
+	#b1.rotation_degrees = 180
+	#$Boundries.add_child(b1)
+	#$Boundries.add_child(b2)
 
 func _process(delta):
 	if $Characters/Ball.position.x >= currentChunkReach - 2000:
