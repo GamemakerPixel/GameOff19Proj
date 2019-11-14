@@ -25,10 +25,10 @@ func _process(delta):
 			onGameOver = true
 	if position.x - get_parent().get_node("BoundryMonster").position.x < 4000:
 		$Camera2D.shake(0.5, 20, (40 - ((position.x - get_parent().get_node("BoundryMonster").position.x)/100))/4)
-		if position.x - get_parent().get_node("BoundryMonster").position.x < 2000:
+		if position.x - get_parent().get_node("BoundryMonster").position.x < 2550:
 			var opacity = (2550 - (position.x - get_parent().get_node("BoundryMonster").position.x)) / 10
 			print(opacity)
-			$CanvasLayer/ColorRect.color = Color8(255, 255, 255, opacity)
+			$CanvasLayer/ColorRect.color = Color8(255, 15, 15, opacity)
 	if position.y > 904 || position.y < 404:
 		shortReset()
 	determineMedals()
