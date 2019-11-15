@@ -9,7 +9,7 @@ func _on_Modes_pressed():
 	get_tree().change_scene("res://GameOff19Proj/Menus/Modes.tscn")
 
 func _on_Metals_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://GameOff19Proj/Menus/Medals.tscn")
 
 func _on_Custom_pressed():
 	pass # Replace with function body.
