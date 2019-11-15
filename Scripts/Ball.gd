@@ -29,6 +29,8 @@ func _process(delta):
 			var opacity = (2550 - (position.x - get_parent().get_node("BoundryMonster").position.x)) / 10
 			print(opacity)
 			$CanvasLayer/ColorRect.color = Color8(255, 15, 15, opacity)
+		else:
+			$CanvasLayer/ColorRect.color = Color8(255, 15, 15, 0)
 	if position.y > 904 || position.y < 404:
 		shortReset()
 	determineMedals()
