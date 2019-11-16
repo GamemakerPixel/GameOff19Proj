@@ -1,0 +1,230 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GameOff19Proj/Scripts/Medals.gd" type="Script" id=1]
+[ext_resource path="res://GameOff19Proj/Sprites/Medals.png" type="Texture" id=2]
+[ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 3 )
+
+[node name="Medals" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="E300" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 241, 100 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="Label" type="Label" parent="E300"]
+margin_left = -18.4698
+margin_top = 8.0001
+margin_right = 258.53
+margin_bottom = 49.0001
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 1 )
+text = "Easy - 300"
+align = 1
+valign = 1
+
+[node name="E500" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 512, 100 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="Label" type="Label" parent="E500"]
+margin_left = -18.4698
+margin_top = 8.0001
+margin_right = 258.53
+margin_bottom = 49.0001
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 1 )
+text = "Easy - 500"
+align = 1
+valign = 1
+
+[node name="E700" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 771, 100 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+
+[node name="Label" type="Label" parent="E700"]
+margin_left = -18.4698
+margin_top = 8.0001
+margin_right = 258.53
+margin_bottom = 49.0001
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 1 )
+text = "Easy - 700"
+align = 1
+valign = 1
+
+[node name="N300" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 241, 300 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 16 )
+
+[node name="Label" type="Label" parent="N300"]
+margin_left = -18.4698
+margin_top = 8.0001
+margin_right = 258.53
+margin_bottom = 49.0001
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 1 )
+text = "Normal - 300"
+align = 1
+valign = 1
+
+[node name="N500" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 512, 300 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="Label" type="Label" parent="N500"]
+margin_left = -18.4698
+margin_top = 8.0001
+margin_right = 258.53
+margin_bottom = 49.0001
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 1 )
+text = "Normal - 500"
+align = 1
+valign = 1
+
+[node name="N700" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 771, 300 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 32, 16, 16, 16 )
+
+[node name="Label" type="Label" parent="N700"]
+margin_left = -18.4698
+margin_top = 8.0001
+margin_right = 258.53
+margin_bottom = 49.0001
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 1 )
+text = "Normal - 700"
+align = 1
+valign = 1
+
+[node name="H300" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 204, 500 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 16, 16 )
+
+[node name="Label" type="Label" parent="H300"]
+margin_left = -18.4698
+margin_top = 8.0001
+margin_right = 258.53
+margin_bottom = 49.0001
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 1 )
+text = "Hard - 300"
+align = 1
+valign = 1
+
+[node name="H500" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 408, 500 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 16, 32, 16, 16 )
+
+[node name="Label" type="Label" parent="H500"]
+margin_left = -18.4698
+margin_top = 8.0001
+margin_right = 258.53
+margin_bottom = 49.0001
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 1 )
+text = "Hard - 500"
+align = 1
+valign = 1
+
+[node name="H700" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 612, 500 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 16, 16 )
+
+[node name="Label" type="Label" parent="H700"]
+margin_left = -18.4698
+margin_top = 8.0001
+margin_right = 258.53
+margin_bottom = 49.0001
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 1 )
+text = "Hard - 700"
+align = 1
+valign = 1
+
+[node name="H1000" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 816, 500 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 48, 16, 16 )
+
+[node name="Label" type="Label" parent="H1000"]
+margin_left = -18.4698
+margin_top = 8.0001
+margin_right = 258.53
+margin_bottom = 49.0001
+rect_scale = Vector2( 0.125, 0.125 )
+custom_fonts/font = SubResource( 1 )
+text = "Hard - 1000"
+align = 1
+valign = 1
+
+[node name="Back" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+custom_styles/focus = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
+text = "Back"
+flat = true
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
