@@ -1,0 +1,179 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameOff19Proj/Scripts/CustomGame.gd" type="Script" id=1]
+[ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 170
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="CustomGame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 136.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.909804, 0, 0, 1 )
+text = "Custom Game"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_top = 200.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_constants/separation = 50
+
+[node name="DBP" type="HSlider" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 16.0
+value = 50.0
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxContainer/DBP"]
+margin_left = 700.0
+margin_top = 20.0
+margin_right = 740.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Val"
+
+[node name="Label" type="Label" parent="VBoxContainer/DBP"]
+margin_left = 343.0
+margin_top = 20.0
+margin_right = 681.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Distance Between Platforms:"
+
+[node name="PnSP" type="HSlider" parent="VBoxContainer"]
+margin_top = 66.0
+margin_right = 1024.0
+margin_bottom = 82.0
+value = 10.0
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxContainer/PnSP"]
+margin_left = 756.0
+margin_top = 20.0
+margin_right = 796.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Val"
+
+[node name="Label" type="Label" parent="VBoxContainer/PnSP"]
+margin_left = 287.0
+margin_top = 20.0
+margin_right = 737.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "% Chance of not Spawning a Platform:"
+
+[node name="MPS" type="HSlider" parent="VBoxContainer"]
+margin_top = 132.0
+margin_right = 1024.0
+margin_bottom = 148.0
+min_value = 1.0
+max_value = 10.0
+value = 5.0
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxContainer/MPS"]
+margin_left = 663.0
+margin_top = 20.0
+margin_right = 703.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Val"
+
+[node name="Label" type="Label" parent="VBoxContainer/MPS"]
+margin_left = 380.0
+margin_top = 20.0
+margin_right = 644.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Minimum Platform Size:"
+
+[node name="PMR" type="HSlider" parent="VBoxContainer"]
+margin_top = 198.0
+margin_right = 1024.0
+margin_bottom = 214.0
+max_value = 45.0
+value = 10.0
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxContainer/PMR"]
+margin_left = 669.0
+margin_top = 20.0
+margin_right = 709.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Val"
+
+[node name="Label" type="Label" parent="VBoxContainer/PMR"]
+margin_left = 377.0
+margin_top = 20.0
+margin_right = 647.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Platform Max Rotation:"
+
+[node name="BSS" type="HSlider" parent="VBoxContainer"]
+margin_top = 264.0
+margin_right = 1024.0
+margin_bottom = 280.0
+value = 10.0
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxContainer/BSS"]
+margin_left = 657.0
+margin_top = 20.0
+margin_right = 697.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Val"
+
+[node name="Label" type="Label" parent="VBoxContainer/BSS"]
+margin_left = 377.0
+margin_top = 20.0
+margin_right = 647.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Boundry Start Speed:"
+
+[node name="BA" type="HSlider" parent="VBoxContainer"]
+margin_top = 330.0
+margin_right = 1024.0
+margin_bottom = 346.0
+max_value = 20.0
+value = 3.0
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxContainer/BA"]
+margin_left = 659.0
+margin_top = 20.0
+margin_right = 699.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Val"
+
+[node name="Label" type="Label" parent="VBoxContainer/BA"]
+margin_left = 380.0
+margin_top = 20.0
+margin_right = 644.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 2 )
+text = "Boundry Acceleration:"
+[connection signal="value_changed" from="VBoxContainer/DBP" to="." method="_on_DBP_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/PnSP" to="." method="_on_PnSP_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/MPS" to="." method="_on_MPS_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/PMR" to="." method="_on_PMR_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/BSS" to="." method="_on_BSS_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/BA" to="." method="_on_BA_value_changed"]
