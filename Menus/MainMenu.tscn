@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=2]
@@ -11,6 +11,95 @@ font_data = ExtResource( 2 )
 size = 80
 font_data = ExtResource( 2 )
 
+[sub_resource type="Animation" id=3]
+resource_name = "mainmenu"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 10 ), Vector2( 0, -10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Buttons:rect_position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 200 ), Vector2( 0, 207 ), Vector2( 0, 193 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Buttons/Play:custom_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.647059, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0.647059, 0, 0, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Buttons/Modes:custom_colors/font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1, 2, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.647059, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0.647059, 0, 0, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Buttons/Metals:custom_colors/font_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 2, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.647059, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0.647059, 0, 0, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Buttons/Custom:custom_colors/font_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.647059, 0, 0, 1 ), Color( 0.647059, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Buttons/Quit:custom_colors/font_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.647059, 0, 0, 1 ), Color( 0.647059, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,8 +108,9 @@ script = ExtResource( 1 )
 [node name="BG Art" type="Sprite" parent="."]
 
 [node name="Title" type="Label" parent="."]
+margin_top = -6.82562
 margin_right = 1024.0
-margin_bottom = 170.0
+margin_bottom = 163.174
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.909804, 0, 0, 1 )
 text = "Escape"
@@ -28,17 +118,17 @@ align = 1
 valign = 1
 
 [node name="Buttons" type="VBoxContainer" parent="."]
-margin_top = 200.0
+margin_top = 195.222
 margin_right = 1024.0
-margin_bottom = 600.0
+margin_bottom = 606.223
 
 [node name="Play" type="Button" parent="Buttons"]
 margin_right = 1024.0
 margin_bottom = 70.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
+custom_colors/font_color = Color( 0.658393, 0.0321121, 0.0321121, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 text = "Play"
 flat = true
 
@@ -48,8 +138,8 @@ margin_right = 1024.0
 margin_bottom = 144.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
+custom_colors/font_color = Color( 0.77604, 0.365445, 0.365445, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 text = "Modes"
 flat = true
 
@@ -59,8 +149,8 @@ margin_right = 1024.0
 margin_bottom = 218.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
+custom_colors/font_color = Color( 0.893687, 0.698779, 0.698779, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 text = "Metals"
 flat = true
 
@@ -70,8 +160,8 @@ margin_right = 1024.0
 margin_bottom = 292.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
+custom_colors/font_color = Color( 0.965999, 0.903664, 0.903664, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 text = "Custom Game"
 flat = true
 
@@ -82,9 +172,12 @@ margin_bottom = 366.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.34902, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 text = "Quit"
 flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/mainmenu = SubResource( 3 )
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Buttons/Modes" to="." method="_on_Modes_pressed"]
 [connection signal="pressed" from="Buttons/Metals" to="." method="_on_Metals_pressed"]
