@@ -40,7 +40,7 @@ func generateForPos(pos, height = "low"):
 		object.scale.x = rng.randi_range(GlobalVariables.gameGenerationSettings[2], GlobalVariables.gameGenerationSettings[2] + 4)
 		object.rotation_degrees = rng.randi_range(-GlobalVariables.gameGenerationSettings[3], GlobalVariables.gameGenerationSettings[3])
 
-#Removed Code
+#Removed
 #func placeBoundries(from, to):
 	#var b1 = preload("res://GameOff19Proj/Boundries/BoundryFluid.tscn").instance()
 	#var b2 = preload("res://GameOff19Proj/Boundries/BoundryFluid.tscn").instance()
@@ -56,3 +56,7 @@ func _process(delta):
 	if $Characters/Ball.position.x >= currentChunkReach - 2000:
 		posQueue.append(-1)
 		runGenerationSequence(currentChunkReach, currentChunkReach + chunkDistance)
+
+func reset():
+	$Characters/Ball/CanvasLayer/GameOver.disappear()
+	$Characters/Ball.position = Vector2(400, 654)
