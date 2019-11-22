@@ -1,11 +1,22 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/CustomGame.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://GameOff19Proj/Sprites/Sliders/SlidersGrabber.png" type="Texture" id=3]
+[ext_resource path="res://GameOff19Proj/Sprites/Sliders/SlidersBar.png" type="Texture" id=4]
+[ext_resource path="res://GameOff19Proj/Sprites/Sliders/SlidersFill.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 170
 font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 16, 16 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 32
@@ -39,6 +50,11 @@ custom_constants/separation = 50
 editor/display_folded = true
 margin_right = 1024.0
 margin_bottom = 16.0
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 4 )
+custom_styles/grabber_area = SubResource( 5 )
 min_value = 10.0
 value = 50.0
 ticks_on_borders = true
@@ -64,6 +80,11 @@ editor/display_folded = true
 margin_top = 66.0
 margin_right = 1024.0
 margin_bottom = 82.0
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 4 )
+custom_styles/grabber_area = SubResource( 5 )
 value = 10.0
 ticks_on_borders = true
 
@@ -88,6 +109,11 @@ editor/display_folded = true
 margin_top = 132.0
 margin_right = 1024.0
 margin_bottom = 148.0
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 4 )
+custom_styles/grabber_area = SubResource( 5 )
 min_value = 1.0
 max_value = 10.0
 value = 5.0
@@ -114,6 +140,11 @@ editor/display_folded = true
 margin_top = 198.0
 margin_right = 1024.0
 margin_bottom = 214.0
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 4 )
+custom_styles/grabber_area = SubResource( 5 )
 max_value = 45.0
 value = 10.0
 ticks_on_borders = true
@@ -139,6 +170,11 @@ editor/display_folded = true
 margin_top = 264.0
 margin_right = 1024.0
 margin_bottom = 280.0
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 4 )
+custom_styles/grabber_area = SubResource( 5 )
 value = 10.0
 ticks_on_borders = true
 
@@ -163,6 +199,11 @@ editor/display_folded = true
 margin_top = 330.0
 margin_right = 1024.0
 margin_bottom = 346.0
+custom_icons/grabber_disabled = ExtResource( 3 )
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 4 )
+custom_styles/grabber_area = SubResource( 5 )
 min_value = 1.0
 max_value = 20.0
 value = 3.0
