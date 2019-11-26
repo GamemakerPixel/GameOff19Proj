@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=2]
@@ -7,12 +7,13 @@
 size = 170
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=3]
 size = 80
 font_data = ExtResource( 2 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "mainmenu"
+[sub_resource type="Animation" id=4]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -124,7 +125,7 @@ tracks/8/keys = {
 "values": [ Color( 0.647059, 0, 0, 1 ), Color( 0.647059, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0.647059, 0, 0, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 32
 font_data = ExtResource( 2 )
 
@@ -153,7 +154,8 @@ margin_bottom = 606.45
 [node name="Play" type="Button" parent="Buttons"]
 margin_right = 1024.0
 margin_bottom = 70.0
-custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -164,7 +166,8 @@ flat = true
 margin_top = 74.0
 margin_right = 1024.0
 margin_bottom = 144.0
-custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0.650861, 0.0107719, 0.0107719, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -175,7 +178,8 @@ flat = true
 margin_top = 148.0
 margin_right = 1024.0
 margin_bottom = 218.0
-custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0.768508, 0.344105, 0.344105, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -186,7 +190,8 @@ flat = true
 margin_top = 222.0
 margin_right = 1024.0
 margin_bottom = 292.0
-custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0.886155, 0.677439, 0.677439, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -197,7 +202,8 @@ flat = true
 margin_top = 296.0
 margin_right = 1024.0
 margin_bottom = 366.0
-custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0.988594, 0.967684, 0.967684, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -205,14 +211,14 @@ text = "Quit"
 flat = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/mainmenu = SubResource( 3 )
+anims/mainmenu = SubResource( 4 )
 
 [node name="Credit" type="Label" parent="."]
 margin_left = 710.0
 margin_top = 566.737
 margin_right = 1014.0
 margin_bottom = 592.737
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.652762, 0.0161579, 0.0161579, 1 )
 text = "Game by: GamemakerPixel"
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_Play_pressed"]
