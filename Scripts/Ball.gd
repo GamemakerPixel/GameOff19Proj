@@ -23,11 +23,11 @@ func _process(delta):
 			onGameOver = true
 	if position.x - get_parent().get_node("BoundryMonster").position.x < 4000:
 		$Camera2D.shake(0.5, 20, (40 - ((position.x - get_parent().get_node("BoundryMonster").position.x)/100))/4)
-		if position.x - get_parent().get_node("BoundryMonster").position.x < 2550:
-			var opacity = (2550 - (position.x - get_parent().get_node("BoundryMonster").position.x)) / 10
-			$CanvasLayer/ColorRect.color = Color8(255, 15, 15, opacity)
-		else:
-			$CanvasLayer/ColorRect.color = Color8(255, 15, 15, 0)
+	if position.x - get_parent().get_node("BoundryMonster").position.x < 2550:
+		var opacity = (2550 - (position.x - get_parent().get_node("BoundryMonster").position.x)) / 10
+		$CanvasLayer/ColorRect.color = Color8(255, 15, 15, opacity)
+	else:
+		$CanvasLayer/ColorRect.color = Color8(255, 15, 15, 0)
 	if position.y > 904 || position.y < 204:
 		shortReset()
 	determineMedals()
@@ -111,8 +111,7 @@ func update_visuals():
 		$CanvasLayer/Tracker.scale = Vector2(1000/monToSelfDis, 1000/monToSelfDis)
 
 func leap():
-	var starting = true
-	if starting:
+	if not get_parent().get_node("BoundryMonster").ready:
 		get_parent().get_node("BoundryMonster").ready = true
 	look_at(get_global_mouse_position())
 	sleeping = false
