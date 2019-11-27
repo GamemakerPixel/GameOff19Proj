@@ -23,6 +23,14 @@ func _process(delta):
 			onGameOver = true
 	if position.x - get_parent().get_node("BoundryMonster").position.x < 4000:
 		$Camera2D.shake(0.5, 20, (40 - ((position.x - get_parent().get_node("BoundryMonster").position.x)/100))/4)
+		$Normal.stop()
+		if not $Intense.playing:
+			$Intense.play()
+		$Intense.volume_db = (((position.x - get_parent().get_node("BoundryMonster").position.x)/100))/4 - 20
+	else:
+		if not $Normal.playing:
+			$Intense.stop()
+			$Normal.play()
 	if position.x - get_parent().get_node("BoundryMonster").position.x < 2550:
 		var opacity = (2550 - (position.x - get_parent().get_node("BoundryMonster").position.x)) / 10
 		$CanvasLayer/ColorRect.color = Color8(255, 15, 15, opacity)
@@ -125,3 +133,7 @@ func _on_DetectCollision_body_entered(body):
 		applied_force = Vector2(0, 0)
 		linear_velocity = Vector2(0, 0)
 		sleeping = true
+
+
+func _on_Normal_finished():
+	$Normal.play()
