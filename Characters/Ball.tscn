@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Sprites/Characters/Ball.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://GameOff19Proj/Scripts/GameOver.gd" type="Script" id=6]
 [ext_resource path="res://GameOff19Proj/Sprites/Medals.png" type="Texture" id=7]
+[ext_resource path="res://GameOff19Proj/Music/Gameplay.wav" type="AudioStream" id=8]
+[ext_resource path="res://GameOff19Proj/Music/IntenseGameplay.wav" type="AudioStream" id=9]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.0
@@ -287,7 +289,17 @@ align = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Medal"]
 anims/Medal = SubResource( 8 )
+
+[node name="Normal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -20.0
+autoplay = true
+
+[node name="Intense" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -20.0
 [connection signal="body_entered" from="DetectCollision" to="." method="_on_DetectCollision_body_entered"]
 [connection signal="pressed" from="CanvasLayer/GameOver/Buttons/Retry" to="CanvasLayer/GameOver" method="_on_Retry_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameOver/Buttons/Menu" to="CanvasLayer/GameOver" method="_on_Menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameOver/Buttons/Quit" to="CanvasLayer/GameOver" method="_on_Quit_pressed"]
+[connection signal="finished" from="Normal" to="." method="_on_Normal_finished"]
