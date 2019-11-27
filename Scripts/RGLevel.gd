@@ -58,5 +58,12 @@ func _process(delta):
 		runGenerationSequence(currentChunkReach, currentChunkReach + chunkDistance)
 
 func reset():
-	$Characters/Ball/CanvasLayer/GameOver.disappear()
+	runGenerationSequence(0, chunkDistance)
+	$Characters/Ball.onGameOver = false
+	$Characters/BoundryMonster.ready = false
+	$Characters/BoundryMonster.speed = $Characters/BoundryMonster.startSpeed
+	$Characters/BoundryMonster.position.x = -5000
 	$Characters/Ball.position = Vector2(400, 654)
+	$Characters/Ball/CanvasLayer/ColorRect.color = Color8(255, 15, 15, 0)
+	$Characters/Ball/CanvasLayer/GameOver.disappear()
+	print($Characters/Ball.position)
