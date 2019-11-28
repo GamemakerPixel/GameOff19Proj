@@ -1,28 +1,29 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/CustomGame.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://GameOff19Proj/Sprites/Sliders/SlidersGrabber.png" type="Texture" id=3]
 [ext_resource path="res://GameOff19Proj/Sprites/Sliders/SlidersBar.png" type="Texture" id=4]
 [ext_resource path="res://GameOff19Proj/Sprites/Sliders/SlidersFill.png" type="Texture" id=5]
+[ext_resource path="res://GameOff19Proj/Music/Gameplay.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 170
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 16, 16 )
 
-[sub_resource type="StyleBoxTexture" id=5]
+[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 16, 16 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 32
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 size = 80
 font_data = ExtResource( 2 )
 
@@ -53,8 +54,8 @@ margin_bottom = 16.0
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 3 )
-custom_styles/slider = SubResource( 4 )
-custom_styles/grabber_area = SubResource( 5 )
+custom_styles/slider = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
 min_value = 10.0
 value = 50.0
 ticks_on_borders = true
@@ -64,7 +65,7 @@ margin_left = 700.0
 margin_top = 20.0
 margin_right = 740.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Val"
 
 [node name="Label" type="Label" parent="VBoxContainer/DBP"]
@@ -72,7 +73,7 @@ margin_left = 343.0
 margin_top = 20.0
 margin_right = 681.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Distance Between Platforms:"
 
 [node name="PnSP" type="HSlider" parent="VBoxContainer"]
@@ -83,8 +84,8 @@ margin_bottom = 82.0
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 3 )
-custom_styles/slider = SubResource( 4 )
-custom_styles/grabber_area = SubResource( 5 )
+custom_styles/slider = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
 value = 10.0
 ticks_on_borders = true
 
@@ -93,7 +94,7 @@ margin_left = 756.0
 margin_top = 20.0
 margin_right = 796.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Val"
 
 [node name="Label" type="Label" parent="VBoxContainer/PnSP"]
@@ -101,7 +102,7 @@ margin_left = 287.0
 margin_top = 20.0
 margin_right = 737.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "% Chance of not Spawning a Platform:"
 
 [node name="MPS" type="HSlider" parent="VBoxContainer"]
@@ -112,8 +113,8 @@ margin_bottom = 148.0
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 3 )
-custom_styles/slider = SubResource( 4 )
-custom_styles/grabber_area = SubResource( 5 )
+custom_styles/slider = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
 min_value = 1.0
 max_value = 10.0
 value = 5.0
@@ -124,7 +125,7 @@ margin_left = 663.0
 margin_top = 20.0
 margin_right = 703.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Val"
 
 [node name="Label" type="Label" parent="VBoxContainer/MPS"]
@@ -132,7 +133,7 @@ margin_left = 380.0
 margin_top = 20.0
 margin_right = 644.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Minimum Platform Size:"
 
 [node name="PMR" type="HSlider" parent="VBoxContainer"]
@@ -143,8 +144,8 @@ margin_bottom = 214.0
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 3 )
-custom_styles/slider = SubResource( 4 )
-custom_styles/grabber_area = SubResource( 5 )
+custom_styles/slider = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
 max_value = 45.0
 value = 10.0
 ticks_on_borders = true
@@ -154,7 +155,7 @@ margin_left = 669.0
 margin_top = 20.0
 margin_right = 709.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Val"
 
 [node name="Label" type="Label" parent="VBoxContainer/PMR"]
@@ -162,7 +163,7 @@ margin_left = 377.0
 margin_top = 20.0
 margin_right = 647.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Platform Max Rotation:"
 
 [node name="BSS" type="HSlider" parent="VBoxContainer"]
@@ -173,8 +174,8 @@ margin_bottom = 280.0
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 3 )
-custom_styles/slider = SubResource( 4 )
-custom_styles/grabber_area = SubResource( 5 )
+custom_styles/slider = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
 value = 10.0
 ticks_on_borders = true
 
@@ -183,7 +184,7 @@ margin_left = 657.0
 margin_top = 20.0
 margin_right = 697.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Val"
 
 [node name="Label" type="Label" parent="VBoxContainer/BSS"]
@@ -191,7 +192,7 @@ margin_left = 377.0
 margin_top = 20.0
 margin_right = 647.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Boundry Start Speed:"
 
 [node name="BA" type="HSlider" parent="VBoxContainer"]
@@ -202,8 +203,8 @@ margin_bottom = 346.0
 custom_icons/grabber_disabled = ExtResource( 3 )
 custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 3 )
-custom_styles/slider = SubResource( 4 )
-custom_styles/grabber_area = SubResource( 5 )
+custom_styles/slider = SubResource( 2 )
+custom_styles/grabber_area = SubResource( 3 )
 min_value = 1.0
 max_value = 20.0
 value = 3.0
@@ -214,7 +215,7 @@ margin_left = 659.0
 margin_top = 20.0
 margin_right = 699.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Val"
 
 [node name="Label" type="Label" parent="VBoxContainer/BA"]
@@ -222,14 +223,14 @@ margin_left = 380.0
 margin_top = 20.0
 margin_right = 644.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Boundry Acceleration:"
 
 [node name="Back" type="Button" parent="."]
 margin_top = 530.0
 margin_right = 163.0
 margin_bottom = 600.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
 text = "Back"
 flat = true
@@ -239,10 +240,15 @@ margin_left = 861.0
 margin_top = 530.0
 margin_right = 1024.0
 margin_bottom = 600.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.647059, 0, 0, 1 )
 text = "Play"
 flat = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -15.0
+autoplay = true
 [connection signal="value_changed" from="VBoxContainer/DBP" to="." method="_on_DBP_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/PnSP" to="." method="_on_PnSP_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/MPS" to="." method="_on_MPS_value_changed"]
@@ -251,3 +257,4 @@ flat = true
 [connection signal="value_changed" from="VBoxContainer/BA" to="." method="_on_BA_value_changed"]
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="finished" from="Music" to="." method="_on_Music_finished"]
