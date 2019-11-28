@@ -126,6 +126,7 @@ func leap():
 		sleeping = false
 		var Velocity = get_local_mouse_position() * Vector2(gravity_scale / 1.2, gravity_scale / 1.2)
 		apply_central_impulse(Velocity.rotated(rotation))
+		$Leap.play()
 
 func _on_DetectCollision_body_entered(body):
 	if body.get_parent().name == "Platforms":
@@ -134,6 +135,7 @@ func _on_DetectCollision_body_entered(body):
 		applied_force = Vector2(0, 0)
 		linear_velocity = Vector2(0, 0)
 		sleeping = true
+		$Land.play()
 
 
 func _on_Normal_finished():
