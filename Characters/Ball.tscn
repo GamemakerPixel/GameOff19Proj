@@ -3,7 +3,7 @@
 [ext_resource path="res://GameOff19Proj/Scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Sprites/Characters/Ball.png" type="Texture" id=2]
 [ext_resource path="res://GameOff19Proj/Scripts/Camera2D.gd" type="Script" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://GameOff19Proj/Sprites/Enemies/AlertArrow.png" type="Texture" id=4]
 [ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://GameOff19Proj/Scripts/GameOver.gd" type="Script" id=6]
 [ext_resource path="res://GameOff19Proj/Sprites/Medals.png" type="Texture" id=7]
@@ -180,9 +180,11 @@ script = ExtResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Tracker" type="Sprite" parent="CanvasLayer"]
-modulate = Color( 1, 0, 0, 1 )
+[node name="Tracker" type="Node2D" parent="CanvasLayer"]
 position = Vector2( 50, 300 )
+
+[node name="Tracker" type="Sprite" parent="CanvasLayer/Tracker"]
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 
 [node name="Score" type="Label" parent="CanvasLayer"]
