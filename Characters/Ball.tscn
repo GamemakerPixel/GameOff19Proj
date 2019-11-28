@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Sprites/Characters/Ball.png" type="Texture" id=2]
@@ -6,9 +6,12 @@
 [ext_resource path="res://GameOff19Proj/Sprites/Enemies/AlertArrow.png" type="Texture" id=4]
 [ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://GameOff19Proj/Scripts/GameOver.gd" type="Script" id=6]
-[ext_resource path="res://GameOff19Proj/Sprites/Medals.png" type="Texture" id=7]
-[ext_resource path="res://GameOff19Proj/Music/Gameplay.wav" type="AudioStream" id=8]
-[ext_resource path="res://GameOff19Proj/Music/IntenseGameplay.wav" type="AudioStream" id=9]
+[ext_resource path="res://GameOff19Proj/Sound/GameOver.wav" type="AudioStream" id=7]
+[ext_resource path="res://GameOff19Proj/Sprites/Medals.png" type="Texture" id=8]
+[ext_resource path="res://GameOff19Proj/Music/Gameplay.wav" type="AudioStream" id=9]
+[ext_resource path="res://GameOff19Proj/Music/IntenseGameplay.wav" type="AudioStream" id=10]
+[ext_resource path="res://GameOff19Proj/Sound/Leap.wav" type="AudioStream" id=11]
+[ext_resource path="res://GameOff19Proj/Sound/Land.wav" type="AudioStream" id=12]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.0
@@ -105,6 +108,18 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sizzle:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="StyleBoxEmpty" id=5]
@@ -272,10 +287,14 @@ disabled = true
 text = "Quit"
 flat = true
 
+[node name="Sizzle" type="AudioStreamPlayer" parent="CanvasLayer/GameOver"]
+stream = ExtResource( 7 )
+volume_db = -12.696
+
 [node name="Medal" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 512, 300 )
 scale = Vector2( 1e-05, 1e-05 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 16, 16 )
 
@@ -293,13 +312,21 @@ align = 1
 anims/Medal = SubResource( 8 )
 
 [node name="Normal" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource( 9 )
 volume_db = -20.0
 autoplay = true
 
 [node name="Intense" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource( 10 )
 volume_db = -20.0
+
+[node name="Leap" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -22.948
+
+[node name="Land" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -11.718
 [connection signal="body_entered" from="DetectCollision" to="." method="_on_DetectCollision_body_entered"]
 [connection signal="pressed" from="CanvasLayer/GameOver/Buttons/Retry" to="CanvasLayer/GameOver" method="_on_Retry_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameOver/Buttons/Menu" to="CanvasLayer/GameOver" method="_on_Menu_pressed"]
