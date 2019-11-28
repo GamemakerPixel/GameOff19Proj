@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameOff19Proj/Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://GameOff19Proj/Fonts/pixeldroidMenuRegular.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://GameOff19Proj/Music/Gameplay.wav" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 170
@@ -221,8 +222,14 @@ margin_bottom = 592.737
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.652762, 0.0161579, 0.0161579, 1 )
 text = "Game by: GamemakerPixel"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -15.0
+autoplay = true
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Buttons/Modes" to="." method="_on_Modes_pressed"]
 [connection signal="pressed" from="Buttons/Metals" to="." method="_on_Metals_pressed"]
 [connection signal="pressed" from="Buttons/Custom" to="." method="_on_Custom_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="finished" from="Music" to="." method="_on_Music_finished"]
