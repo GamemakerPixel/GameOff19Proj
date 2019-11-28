@@ -41,3 +41,6 @@ func selectButton(button):
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://GameOff19Proj/Menus/MainMenu.tscn")
+
+func _on_Music_finished():
+	$Music.play()
