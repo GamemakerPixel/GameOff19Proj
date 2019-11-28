@@ -49,3 +49,6 @@ func _on_Back_pressed():
 
 func _on_Play_pressed():
 	get_tree().change_scene("res://GameOff19Proj/Levels/RGLevel.tscn")
+
+func _on_Music_finished():
+	$Music.play()
