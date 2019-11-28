@@ -8,6 +8,7 @@ func _ready():
 	pass
 
 func _process(delta):
+	print(onGameOver)
 	if startSleeping:
 		sleeping = true
 		startSleeping = false
@@ -20,7 +21,6 @@ func _process(delta):
 	if position.x < get_parent().get_node("BoundryMonster").position.x:
 		if not onGameOver:
 			$CanvasLayer/GameOver.appear(score)
-			onGameOver = true
 	if position.x - get_parent().get_node("BoundryMonster").position.x < 4000:
 		$Camera2D.shake(0.5, 20, (40 - ((position.x - get_parent().get_node("BoundryMonster").position.x)/100))/4)
 		$Normal.stop()
@@ -119,12 +119,13 @@ func update_visuals():
 		$CanvasLayer/Tracker.scale = Vector2(1000/monToSelfDis, 1000/monToSelfDis)
 
 func leap():
-	if not get_parent().get_node("BoundryMonster").ready:
-		get_parent().get_node("BoundryMonster").ready = true
-	look_at(get_global_mouse_position())
-	sleeping = false
-	var Velocity = get_local_mouse_position() * Vector2(gravity_scale / 1.2, gravity_scale / 1.2)
-	apply_central_impulse(Velocity.rotated(rotation))
+	if not onGameOver:
+		if not get_parent().get_node("BoundryMonster").ready:
+			get_parent().get_node("BoundryMonster").ready = true
+		look_at(get_global_mouse_position())
+		sleeping = false
+		var Velocity = get_local_mouse_position() * Vector2(gravity_scale / 1.2, gravity_scale / 1.2)
+		apply_central_impulse(Velocity.rotated(rotation))
 
 func _on_DetectCollision_body_entered(body):
 	if body.get_parent().name == "Platforms":
