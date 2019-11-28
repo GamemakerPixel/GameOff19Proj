@@ -17,4 +17,3 @@ func _on_Collider_body_entered(body):
 	if body.name == "Ball":
 		if not body.onGameOver:
 			body.get_node("CanvasLayer/GameOver").appear(body.score)
-			body.onGameOver = true
