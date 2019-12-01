@@ -8,7 +8,6 @@ func _ready():
 	pass
 
 func _process(delta):
-	print(onGameOver)
 	if startSleeping:
 		sleeping = true
 		startSleeping = false
